@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  sample-side-menu
 //
 //  Created by NishiokaKohei on 2018/07/11.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,4 +22,5 @@ class ViewController: UIViewController {
 
 
 }
+
 
