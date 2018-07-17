@@ -10,6 +10,13 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    ///
+    /// 1.0 :  完全に見えた状態
+    /// 0.0 :  contentView が見えない
+    ///
+    var contentRatio: Float = 1.0
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
