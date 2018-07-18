@@ -8,13 +8,12 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
 
 
     // MARK: - Private
 
-    private var contentViewController: UIViewController
-    private var sidemeneViewController: SideMenuViewController
+    private var sidemeneViewController = SideMenuViewController()
 
     ///
     /// return true if SideMenu is presenteted on self.
@@ -26,13 +25,11 @@ class MainViewController: UIViewController {
     // MARK: - Initializer
 
     init(_ child: SideMenuViewController) {
-        self.contentViewController = UIViewController()
         self.sidemeneViewController = child
         super.init(nibName: nil, bundle: nil)
     }
 
     required init?(coder aDecoder: NSCoder) {
-        self.contentViewController = UIViewController()
         self.sidemeneViewController = SideMenuViewController()
         super.init(coder: aDecoder)
     }
@@ -42,10 +39,19 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapView))
+        view.addGestureRecognizer(tap)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+
+    // MARK: - TapGesture
+
+    @objc func didTapView() {
+        showSidemenu(animated: true)
     }
 
 

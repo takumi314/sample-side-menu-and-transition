@@ -9,7 +9,34 @@
 import UIKit
 
 
+class ContentView: UIView {
+    static func create(_ bounds: CGRect, max width: CGFloat) -> ContentView {
+        let view = ContentView(frame: bounds)
+        view.frame.size.width = width
+        view.frame.origin.x = -bounds.width
+        view.autoresizingMask = .flexibleHeight
+        return view
+    }
+    func build() {
+        self.backgroundColor = .blue
+    }
+}
+
+
 class SideMenuViewController: UIViewController {
+
+    private var contentView: ContentView!
+
+    ///
+    /// 自身が表示中なrばtrueを返す
+    ///
+    var iShown: Bool {
+        return self.parent != .none
+    }
+
+    private var contentMaxWidth: CGFloat {
+        return view.bounds.width * 0.8
+    }
 
     ///
     /// 1.0 :  完全に見えた状態
@@ -20,11 +47,14 @@ class SideMenuViewController: UIViewController {
             return 0.8
         }
         set {
-            let radio: CGFloat = min(max(newValue, 0), 1)
+            let ratio = min(max(newValue, 0), 1)
 
-            // 
+            contentView.frame.origin.x = contentMaxWidth * ratio - contentView.frame.width
+            contentView.layer.shadowColor = UIColor.black.cgColor
+            contentView.layer.shadowRadius = 3.0
+            contentView.layer.shadowOpacity = 0.8
 
-            view.backgroundColor = UIColor(white: 0.0, alpha: 0.3 * radio)
+            view.backgroundColor = UIColor(white: 0.0, alpha: 0.3 * ratio)
         }
 
     }
@@ -32,6 +62,7 @@ class SideMenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,14 +73,27 @@ class SideMenuViewController: UIViewController {
     // MARK: - Public
 
     func showContentView(animated: Bool) {
+
+        let content = ContentView.create(self.view.bounds, max: contentMaxWidth)
+        content.build()
+
+        self.view.addSubview(content)
+
+        self.contentView = content
+
+
         if animated {
-            UIView.animate(withDuration: 0.3) {
+            UIView.animate(withDuration: 0.5) {
                 self.contentRatio = 1.0
             }
         } else {
             contentRatio = 1.0
         }
     }
+
+
+    // MARK: - Private
+
 
 
     /*
