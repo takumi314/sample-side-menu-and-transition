@@ -48,6 +48,23 @@ class MainViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
+
+    // MARK: - Private
+
+    private func showSidemenu(contentAvailability: Bool = true, animated: Bool) {
+        if isShownSidemenu {
+            return
+        }
+
+        add(sidemeneViewController, onto: self.view.bounds)
+
+        if contentAvailability {
+            sidemeneViewController.showContentView(animated: true)
+        }
+
+    }
+
+
 }
 
 
