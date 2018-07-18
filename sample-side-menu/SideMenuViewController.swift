@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class SideMenuViewController: UIViewController {
 
     ///
@@ -38,7 +39,9 @@ class SideMenuViewController: UIViewController {
     }
 
 
-    private func showContentView(animated: Bool) {
+    // MARK: - Public
+
+    func showContentView(animated: Bool) {
         if animated {
             UIView.animate(withDuration: 0.3) {
                 self.contentRatio = 1.0
