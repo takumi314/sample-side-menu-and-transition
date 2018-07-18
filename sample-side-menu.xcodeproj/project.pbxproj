@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		E10F7E0C20F50F910019B588 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F7E0B20F50F910019B588 /* AppDelegate.swift */; };
-		E10F7E0E20F50F910019B588 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F7E0D20F50F910019B588 /* ViewController.swift */; };
+		E10F7E0E20F50F910019B588 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F7E0D20F50F910019B588 /* MainViewController.swift */; };
 		E10F7E1120F50F910019B588 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10F7E0F20F50F910019B588 /* Main.storyboard */; };
 		E10F7E1320F50F950019B588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E10F7E1220F50F950019B588 /* Assets.xcassets */; };
 		E10F7E1620F50F950019B588 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10F7E1420F50F950019B588 /* LaunchScreen.storyboard */; };
 		E10F7E2120F50F960019B588 /* sample_side_menuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F7E2020F50F960019B588 /* sample_side_menuUITests.swift */; };
+		E1356D9920FE36CF00665CC9 /* ViewControllerPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1356D9820FE36CF00665CC9 /* ViewControllerPresentable.swift */; };
+		E1356D9A20FE36CF00665CC9 /* ViewControllerPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1356D9820FE36CF00665CC9 /* ViewControllerPresentable.swift */; };
+		E1356D9C20FE3BD700665CC9 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1356D9B20FE3BD700665CC9 /* UIViewControllerExtension.swift */; };
+		E1356D9D20FE3BD700665CC9 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1356D9B20FE3BD700665CC9 /* UIViewControllerExtension.swift */; };
+		E1356D9F20FE3EE300665CC9 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1356D9E20FE3EE300665CC9 /* SideMenuViewController.swift */; };
+		E1356DA020FE3EE300665CC9 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1356D9E20FE3EE300665CC9 /* SideMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +34,7 @@
 /* Begin PBXFileReference section */
 		E10F7E0820F50F910019B588 /* sample-side-menu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sample-side-menu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10F7E0B20F50F910019B588 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E10F7E0D20F50F910019B588 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E10F7E0D20F50F910019B588 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E10F7E1020F50F910019B588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E10F7E1220F50F950019B588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E10F7E1520F50F950019B588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +42,9 @@
 		E10F7E1C20F50F960019B588 /* sample-side-menuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sample-side-menuUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10F7E2020F50F960019B588 /* sample_side_menuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sample_side_menuUITests.swift; sourceTree = "<group>"; };
 		E10F7E2220F50F960019B588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1356D9820FE36CF00665CC9 /* ViewControllerPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPresentable.swift; sourceTree = "<group>"; };
+		E1356D9B20FE3BD700665CC9 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		E1356D9E20FE3EE300665CC9 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +86,10 @@
 		E10F7E0A20F50F910019B588 /* sample-side-menu */ = {
 			isa = PBXGroup;
 			children = (
+				E1356D9720FE35EC00665CC9 /* Contract */,
 				E10F7E0B20F50F910019B588 /* AppDelegate.swift */,
-				E10F7E0D20F50F910019B588 /* ViewController.swift */,
+				E10F7E0D20F50F910019B588 /* MainViewController.swift */,
+				E1356D9E20FE3EE300665CC9 /* SideMenuViewController.swift */,
 				E10F7E0F20F50F910019B588 /* Main.storyboard */,
 				E10F7E1220F50F950019B588 /* Assets.xcassets */,
 				E10F7E1420F50F950019B588 /* LaunchScreen.storyboard */,
@@ -94,6 +105,15 @@
 				E10F7E2220F50F960019B588 /* Info.plist */,
 			);
 			path = "sample-side-menuUITests";
+			sourceTree = "<group>";
+		};
+		E1356D9720FE35EC00665CC9 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				E1356D9820FE36CF00665CC9 /* ViewControllerPresentable.swift */,
+				E1356D9B20FE3BD700665CC9 /* UIViewControllerExtension.swift */,
+			);
+			path = Contract;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +217,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E10F7E0E20F50F910019B588 /* ViewController.swift in Sources */,
+				E1356D9C20FE3BD700665CC9 /* UIViewControllerExtension.swift in Sources */,
+				E10F7E0E20F50F910019B588 /* MainViewController.swift in Sources */,
+				E1356D9920FE36CF00665CC9 /* ViewControllerPresentable.swift in Sources */,
+				E1356D9F20FE3EE300665CC9 /* SideMenuViewController.swift in Sources */,
 				E10F7E0C20F50F910019B588 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,7 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1356DA020FE3EE300665CC9 /* SideMenuViewController.swift in Sources */,
+				E1356D9A20FE36CF00665CC9 /* ViewControllerPresentable.swift in Sources */,
 				E10F7E2120F50F960019B588 /* sample_side_menuUITests.swift in Sources */,
+				E1356D9D20FE3BD700665CC9 /* UIViewControllerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
