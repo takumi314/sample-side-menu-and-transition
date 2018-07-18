@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ViewControllerPresentable {
-    func add(_ child: UIViewController)
+    func add(_ child: UIViewController, onto frame: CGRect?)
     func remove()
 }
 

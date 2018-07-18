@@ -10,13 +10,18 @@ import UIKit
 
 extension UIViewController: ViewControllerPresentable {
 
-    func add(_ child: UIViewController) {
+    func add(_ child: UIViewController, onto frame: CGRect?) {
 
         // Add the view controller as a child
         addChildViewController(child)
 
         // Move the child view controller's view to the parent's view
         view.addSubview(child.view)
+
+        if let frame = frame {
+            child.view.frame = frame
+        }
+
 
         // Notify the child that it was moved to a parent
         didMove(toParentViewController: self)
