@@ -13,7 +13,7 @@ final class MainViewController: UIViewController {
 
     // MARK: - Private
 
-    private var sidemeneViewController = SideMenuViewController()
+    private var sidemeneViewController: SideMenuViewController
 
     ///
     /// return true if SideMenu is presenteted on self.
@@ -35,11 +35,18 @@ final class MainViewController: UIViewController {
     }
 
 
-    // MARK: - life cycle
+    // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = .lightGray
+
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTapView))
         view.addGestureRecognizer(tap)
     }

@@ -9,26 +9,16 @@
 import UIKit
 
 
-class ContentView: UIView {
-    static func create(_ bounds: CGRect, max width: CGFloat) -> ContentView {
-        let view = ContentView(frame: bounds)
-        view.frame.size.width = width
-        view.frame.origin.x = -bounds.width
-        view.autoresizingMask = .flexibleHeight
-        return view
-    }
-    func build() {
-        self.backgroundColor = .blue
-    }
-}
-
 
 class SideMenuViewController: UIViewController {
 
+    ///
+    /// コンテナ用のビュー
+    ///
     private var contentView: ContentView!
 
     ///
-    /// 自身が表示中なrばtrueを返す
+    /// 自身が表示中ならばtrueを返す
     ///
     var iShown: Bool {
         return self.parent != .none
@@ -60,9 +50,13 @@ class SideMenuViewController: UIViewController {
     }
 
 
+    // MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let tap = UITapGestureRecognizer(target: self, action: #selector(backgroundTapped))
+        view.addGestureRecognizer(tap)
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,6 +65,14 @@ class SideMenuViewController: UIViewController {
 
 
     // MARK: - Public
+
+    @objc func backgroundTapped(_ sender: UITapGestureRecognizer) {
+
+        hideContentView(animated: true) { (finished) in
+            self.remove()
+        }
+
+    }
 
     func showContentView(animated: Bool) {
 
@@ -88,6 +90,19 @@ class SideMenuViewController: UIViewController {
             }
         } else {
             contentRatio = 1.0
+        }
+    }
+
+    func hideContentView(animated: Bool, completion: ((Bool) -> Swift.Void)?) {
+        if animated {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.contentRatio = 0.0
+            }) {(finished) in
+                completion?(finished)
+            }
+        } else {
+            contentRatio = 0.0
+            completion?(true)
         }
     }
 
