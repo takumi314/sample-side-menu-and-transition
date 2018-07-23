@@ -22,6 +22,8 @@
 		E1356DA22100E56800665CC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1356DA12100E56800665CC9 /* ContentView.swift */; };
 		E1356DA72104DE7A00665CC9 /* SideMenuBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1356DA62104DE7A00665CC9 /* SideMenuBaseController.swift */; };
 		E1356DA82104DE7A00665CC9 /* SideMenuBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1356DA62104DE7A00665CC9 /* SideMenuBaseController.swift */; };
+		E148CCE72104FCB3000932B7 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148CCE62104FCB3000932B7 /* SideMenuTableViewController.swift */; };
+		E148CCE82104FCB3000932B7 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148CCE62104FCB3000932B7 /* SideMenuTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,7 @@
 		E1356D9E20FE3EE300665CC9 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		E1356DA12100E56800665CC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E1356DA62104DE7A00665CC9 /* SideMenuBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuBaseController.swift; sourceTree = "<group>"; };
+		E148CCE62104FCB3000932B7 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 				E10F7E1220F50F950019B588 /* Assets.xcassets */,
 				E10F7E1420F50F950019B588 /* LaunchScreen.storyboard */,
 				E10F7E1720F50F950019B588 /* Info.plist */,
+				E148CCE62104FCB3000932B7 /* SideMenuTableViewController.swift */,
 			);
 			path = "sample-side-menu";
 			sourceTree = "<group>";
@@ -231,6 +235,7 @@
 				E1356D9F20FE3EE300665CC9 /* SideMenuViewController.swift in Sources */,
 				E10F7E0C20F50F910019B588 /* AppDelegate.swift in Sources */,
 				E1356DA72104DE7A00665CC9 /* SideMenuBaseController.swift in Sources */,
+				E148CCE72104FCB3000932B7 /* SideMenuTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1356DA020FE3EE300665CC9 /* SideMenuViewController.swift in Sources */,
+				E148CCE82104FCB3000932B7 /* SideMenuTableViewController.swift in Sources */,
 				E1356D9A20FE36CF00665CC9 /* ViewControllerPresentable.swift in Sources */,
 				E10F7E2120F50F960019B588 /* sample_side_menuUITests.swift in Sources */,
 				E1356D9D20FE3BD700665CC9 /* UIViewControllerExtension.swift in Sources */,

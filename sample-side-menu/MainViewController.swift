@@ -47,18 +47,31 @@ final class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapView))
-        view.addGestureRecognizer(tap)
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapView))
+//        view.addGestureRecognizer(tap)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
+    // MARK: - IBActions
+
+    @IBAction func onTappedMenu(_ sender: UIBarButtonItem) {
+//        let base = SideMenuBaseController(SideMenuViewController())
+//        base.modalPresentationStyle = .overFullScreen
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc =  sb.instantiateViewController(withIdentifier: "SideMenuBaseController")
+
+        navigationController?.present(vc, animated: false, completion: nil)
+//        navigationController?.present(base, animated: false, completion: nil)
+    }
+
+
     // MARK: - TapGesture
 
     @objc func didTapView() {
-        showSidemenu(animated: true)
+//        showSidemenu(animated: true)
     }
 
 

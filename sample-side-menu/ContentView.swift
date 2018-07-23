@@ -19,7 +19,7 @@ class ContentView: UIView {
     }
 
     func build() {
-        self.backgroundColor = .blue
+        self.backgroundColor = .white
     }
 
 }
